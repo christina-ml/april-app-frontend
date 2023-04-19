@@ -1,3 +1,35 @@
+## farm simulator
+forest house water, land
+corn wheat
+random disaster
+
+Example: 10-15% water, 30% forest, 55-60% land, 1% house
+
+grid of 10x10 divs
+  - 10x10 = 100 squares
+  - each square has a different color
+add randomness:
+- to how much water/land/forest/house
+- randomly placed on grid
+
+When you generate the app, it will have a random amount of each 
+
+
+matrix of 10 x 10:
+  - generate row, then generate field
+```
+[
+  ['w','l','w','f'],
+  ['f','l','h','f'],
+  ['h','f','w','l']
+]
+```
+matrix becomes a div of boxs
+
+Feature: Can show animation with water moving, plants growing
+
+## Idea #2: 3 urls, word, see how many instances of that word
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
