@@ -1,4 +1,5 @@
 import './App.css';
+import FieldKey from './FieldKey/FieldKey';
 /*
   W = Water
   H = House
@@ -116,6 +117,9 @@ function App() {
             </div>
           )
         })}
+      </div>
+      <div className="key">
+        <FieldKey />
       </div>
     </div>
   );

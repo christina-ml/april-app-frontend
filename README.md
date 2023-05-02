@@ -1,3 +1,10 @@
+## key
+Make a key alongside the field
+[] LAND
+[] HOUSE
+[] FOREST
+[] WATER
+
 ## farm simulator
 forest house water, land
 corn wheat

@@ -1,0 +1,34 @@
+.fieldKey {
+    border: 1px solid black;
+    width: 200px;
+    padding: 20px;
+}
+
+ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0px;
+}
+
+.landKey::before {
+    color: bisque;
+}
+.houseKey::before {
+    color: brown;
+}
+.forestKey::before {
+    color: green;
+}
+.waterKey::before {
+    color: blue;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+}
+
+ul li::before {
+    content: "\2666";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    margin: 10px;
+    font-size: 40px;
+}
