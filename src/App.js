@@ -1,5 +1,6 @@
 import './App.css';
 import FieldKey from './FieldKey/FieldKey';
+import FieldTile from './FieldTile/FieldTile';
 /*
   W = Water
   H = House
@@ -76,27 +77,6 @@ function createTile (){
 // map through `landData` to create a grid
 function App() {
 
-  // get value for color
-  const getColorForTile = (tile) => {
-    let color;
-
-    switch (tile){
-      case 'W':
-        color = "blue";
-        break;
-      case 'L':
-        color = "bisque";
-        break;
-      case 'F':
-        color = "darkgreen";
-        break;
-      default:
-        color = "brown";
-    }
-
-    return color;
-  }
-
   return (
     <div className="App">
       <div className="land">
@@ -105,13 +85,7 @@ function App() {
             <div className="row" key={index}>
               {row.map((tile, index) => {
                 return (
-                  <div 
-                    key={index}
-                    className="tile"
-                    style={{"backgroundColor": getColorForTile(tile)}}
-                  >
-                    {tile}
-                  </div>
+                  <FieldTile tile={tile} /> 
                 )
               })}
             </div>
