@@ -1,0 +1,17 @@
+.messageConsole {
+    margin: 20px 0;
+}
+
+.messageConsole__title {
+    font-weight: 600;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.messageConsole__messages {
+    padding: 10px;
+    line-height: 1.5em;
+    font-size: 1.3em;
+    height: 300px;
+    overflow-y: scroll;
+}

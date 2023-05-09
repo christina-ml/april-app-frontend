@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import './FieldTile.css';
 
 type FieldTileTypes = {
-    tile: string
+    tile: string;
+    setMessages?: ((message : string[]) => void) | undefined;
+    messages: string[];
 }
 
-const FieldTile = ({tile}: FieldTileTypes) => {
+const FieldTile = ({tile, setMessages, messages}: FieldTileTypes) => {
 
     const [planted, setPlanted] = useState(false);
 
@@ -42,17 +44,17 @@ const FieldTile = ({tile}: FieldTileTypes) => {
         let message = 'You have planted corn here.';
         switch (tileType){
             case 'W':
-                console.log('you cannot plant corn on the water.');
+                setMessages && setMessages(['You cannot plant corn on the water.', ...messages]);
                 break;
             case 'L':
                 setPlanted(true);
-                console.log(message);
+                setMessages && setMessages([message, ...messages]);
                 break;
             case 'F':
-                console.log('you cannot plant corn in the forest.');
+                setMessages && setMessages(['You cannot plant corn in the forest.', ...messages]);
                 break;
             default:
-                console.log('you cannot plant corn on your house.');
+                setMessages && setMessages(['You cannot plant corn on your house.', ...messages]);
             }
     }
 

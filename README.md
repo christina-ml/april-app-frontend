@@ -1,3 +1,7 @@
+## message console
+new messages on the bottom
+they get pushed up
+
 ## install TypeScript for `FieldTile` component
 [Adding typescript in React](https://create-react-app.dev/docs/adding-typescript/)
 ```

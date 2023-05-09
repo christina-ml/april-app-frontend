@@ -11,3 +11,8 @@
   display: flex;
 }
 
+.App__keyAndConsole {
+  max-width: min-content;
+  margin-right: 100px;
+  margin-top: 20px;
+}
