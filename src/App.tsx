@@ -1,7 +1,7 @@
 import './App.css';
-import FieldTile from './FieldTile/FieldTile';
+import FieldTile from './components/FieldTile/FieldTile';
 import Field from './Field';
-import FieldKey from './FieldKey/FieldKey';
+import FieldKey from './components/FieldKey/FieldKey';
 
 const field = new Field();
 
