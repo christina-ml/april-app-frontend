@@ -9,9 +9,9 @@ const MessageConsole = ({messages} : {messages: string[]}) => {
     <div className="messageConsole">
         <div className="messageConsole__title">MessageConsole</div>
         <div className="messageConsole__messages">
-            {messages.map((message) => {
+            {messages.map((message, index) => {
                 return (
-                    <div>
+                    <div key={index + "farmMessage"}>
                       {message}
                     </div>
                 )
