@@ -9,11 +9,21 @@ function getTimeStamp() {
     estToGMT = 4;
   }
 
+  // assign variables to current hours, mins, seconds
   const hours = (date.getUTCHours() % 12) - estToGMT;
   const minutes = date.getUTCMinutes();
   const seconds = date.getUTCSeconds();
 
-  const timeNow = `${hours}:${minutes}:${seconds}`
+  // variable for formatting the current time
+  let timeNow = '';
+
+  // if seconds is a single digit, add a zero in front
+  if (seconds <= 9){
+    timeNow = `${hours}:${minutes}:0${seconds.toFixed(0)}`
+  } else {
+    timeNow = `${hours}:${minutes}:${seconds.toFixed(0)}`
+  }
+
   // console.log(timeNow);
   return timeNow;
 }

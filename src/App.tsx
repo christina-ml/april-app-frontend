@@ -32,7 +32,7 @@ function App() {
           )
         })}
       </div>
-      <div className="App__keyAndConsole">
+      <div className="keyAndConsole">
         <FieldKey />
         <MessageConsole messages={messages} />
       </div>
