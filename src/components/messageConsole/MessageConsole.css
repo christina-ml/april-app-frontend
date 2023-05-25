@@ -11,7 +11,16 @@
 .messageConsole__messages {
     padding: 10px;
     line-height: 1.5em;
-    font-size: 1.3em;
+    font-size: 1em;
     height: 300px;
     overflow-y: scroll;
+    border: 1px solid grey;
+}
+
+.messageConsole__messages :nth-child(odd) {
+    background-color: lightgray;
+}
+
+.messageConsole__messages :nth-child(even) {
+    background-color: ghostwhite;
 }

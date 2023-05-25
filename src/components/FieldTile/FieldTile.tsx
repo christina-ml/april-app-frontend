@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './FieldTile.css';
+import getTimeStamp from '../../helperFunctions/getTimeStamp';
 
 type FieldTileTypes = {
     tile: string;
@@ -9,7 +10,7 @@ type FieldTileTypes = {
 
 const FieldTile = ({tile, setMessages, messages}: FieldTileTypes) => {
 
-    const [planted, setPlanted] = useState(false);
+    const [planted, setPlanted] = useState(false);    
 
     // get value for color for tile
     const getColorForTile = (tile: string) => {
@@ -44,17 +45,17 @@ const FieldTile = ({tile, setMessages, messages}: FieldTileTypes) => {
         let message = 'You have planted corn here.';
         switch (tileType){
             case 'W':
-                setMessages && setMessages(['You cannot plant corn on the water.', ...messages]);
+                setMessages && setMessages([`${getTimeStamp()} You cannot plant corn on the water.`, ...messages]);
                 break;
             case 'L':
                 setPlanted(true);
-                setMessages && setMessages([message, ...messages]);
+                setMessages && setMessages([`${getTimeStamp()} ${message}`, ...messages]);
                 break;
             case 'F':
-                setMessages && setMessages(['You cannot plant corn in the forest.', ...messages]);
+                setMessages && setMessages([`${getTimeStamp()} You cannot plant corn in the forest.`, ...messages]);
                 break;
             default:
-                setMessages && setMessages(['You cannot plant corn on your house.', ...messages]);
+                setMessages && setMessages([`${getTimeStamp()} You cannot plant corn on your house.`, ...messages]);
             }
     }
 

@@ -4,12 +4,13 @@ import Field from './Field';
 import FieldKey from './components/FieldKey/FieldKey';
 import MessageConsole from './components/messageConsole/MessageConsole';
 import { useState } from 'react';
+import getTimeStamp from './helperFunctions/getTimeStamp';
 
 const field = new Field();
 
 // map through `field` to create a grid
 function App() {
-  const [messages, setMessages] = useState(['Welcome to the game'])
+  const [messages, setMessages] = useState([`${getTimeStamp()} Welcome to the game`]);
 
   return (
     <div className="App">

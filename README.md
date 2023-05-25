@@ -2,6 +2,15 @@
 new messages on the bottom
 they get pushed up
 
+## To Do for 5/25/23 - Features to add:
+[x] 1. add timestamp to every event in the log. It should have the format 12:00:00
+1:15pm is 1:15:00
+11:34 ad 23 seconds am is 11:34:23
+00:00:00 => 12am
+
+[x] 2. Add a border around the log
+[x] 3. Set each message in the log to alternating colors
+
 ## install TypeScript for `FieldTile` component
 [Adding typescript in React](https://create-react-app.dev/docs/adding-typescript/)
 ```
