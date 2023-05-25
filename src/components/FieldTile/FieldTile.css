@@ -3,4 +3,9 @@
     width: 80px;
     background-color: bisque;
     cursor: pointer;
-  }
+    box-sizing: border-box;
+}
+
+.tile:hover {
+    border: 3px solid saddlebrown;
+}

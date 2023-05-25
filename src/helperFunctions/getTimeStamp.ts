@@ -1,6 +1,5 @@
 function getTimeStamp() {
   const date = new Date();
-  // console.log(date)
 
   // helper to convert GMT to EST
   let estToGMT = 5;
@@ -14,17 +13,34 @@ function getTimeStamp() {
   const minutes = date.getUTCMinutes();
   const seconds = date.getUTCSeconds();
 
-  // variable for formatting the current time
-  let timeNow = '';
+  let formatHours = '';
+  let formatMinutes = '';
+  let formatSeconds = '';
+
+  // if hours is a single digit, add a zero in front
+  if (hours <= 9){
+    formatHours = `0${hours.toFixed(0)}`
+  } else {
+    formatHours = `${hours.toFixed(0)}`
+  }
+
+  // if minutes is a single digit, add a zero in front
+  if (minutes <= 9){
+    formatMinutes = `0${minutes.toFixed(0)}`
+  } else {
+    formatMinutes = `${minutes.toFixed(0)}`
+  }
 
   // if seconds is a single digit, add a zero in front
   if (seconds <= 9){
-    timeNow = `${hours}:${minutes}:0${seconds.toFixed(0)}`
+    formatSeconds = `0${seconds.toFixed(0)}`
   } else {
-    timeNow = `${hours}:${minutes}:${seconds.toFixed(0)}`
+    formatSeconds = `${seconds.toFixed(0)}`
   }
 
-  // console.log(timeNow);
+  // variable for formatting the current time
+  let timeNow = `${formatHours}:${formatMinutes}:${formatSeconds}`;
+
   return timeNow;
 }
 
